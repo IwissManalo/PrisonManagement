@@ -7,7 +7,7 @@ const port_number = 4000
 app.use(express.json());
 
 const prisonerRoute = require('./routes/prisonerRoute')
-app.use('/prisoner', prisonerRoute)
+app.use('/p', prisonerRoute)
 
 // app.get('/', function (req, res) {
 //     res.send('Hello Prisoners')
