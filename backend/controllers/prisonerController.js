@@ -22,8 +22,7 @@ const prisoners =
         'age': 20,
         'crime': 'Drug Addict',
         'sentence': '3000 years'
-    }
-        
+    }     
 ]
 
 module.exports.prisoners = (req, res) => 
@@ -73,7 +72,7 @@ module.exports.searchPrisoner = (req, res) =>
     (
         (p) => p.id === parseInt(id) || p.name === name
     )
-    
+
     if (matchingPrisoner.length === 0)
     {
         res.status(404).json({'error': `Prisoner with ${id} and ${name} not found`})
